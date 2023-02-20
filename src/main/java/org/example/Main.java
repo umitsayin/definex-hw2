@@ -35,23 +35,23 @@ public class Main {
         customerService.saveCustomer(customer5);
 
         List<Product> productList1 = IntStream.range(0,5)
-                .mapToObj(i -> new Product(UUID.randomUUID(),i + "- kulaklık test ürünü ", Math.random() * 300))
+                .mapToObj(i -> new Product(UUID.randomUUID(),i + "- phone test product ", Math.random() * 300))
                 .collect(Collectors.toList());
 
         List<Product> productList2 = IntStream.range(0,5)
-                .mapToObj(i -> new Product(UUID.randomUUID(),i + "- fare test ürünü ", Math.random() * 2000))
+                .mapToObj(i -> new Product(UUID.randomUUID(),i + "- mouse test product ", Math.random() * 2000))
                 .collect(Collectors.toList());
 
         List<Product> productList3 = IntStream.range(0,5)
-                .mapToObj(i -> new Product(UUID.randomUUID(),i + "- Tablet test ürünü ", Math.random() * 10000))
+                .mapToObj(i -> new Product(UUID.randomUUID(),i + "- TV test product ", Math.random() * 10000))
                 .collect(Collectors.toList());
 
         List<Product> productList4 = IntStream.range(0,5)
-                .mapToObj(i -> new Product(UUID.randomUUID(),i + "- saat test ürünü ", Math.random() * 50))
+                .mapToObj(i -> new Product(UUID.randomUUID(),i + "- Watch test product", Math.random() * 50))
                 .collect(Collectors.toList());
 
         List<Product> productList5 = IntStream.range(0,5)
-                .mapToObj(i -> new Product(UUID.randomUUID(),i + "- gözlük test ürünü ", Math.random() * 4000))
+                .mapToObj(i -> new Product(UUID.randomUUID(),i + "- Glass Test product  ", Math.random() * 4000))
                 .collect(Collectors.toList());
 
         Order order1 = orderService.saveOrder(productList1,customer1.getId());
@@ -95,7 +95,5 @@ public class Main {
         System.out.println("-----------------------");
 
         billService.showCustomerSectorLessThanAverage(750);
-
-
     }
 }
